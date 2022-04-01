@@ -30,7 +30,7 @@ fgv = folium.FeatureGroup(name="USA Volcanoes Map")
 for lat, lon, el, nm in zip(latitude, longitude, elevation, name):
     iframe = folium.IFrame(html=html % (nm, nm, el), width=200, height=100)
     fgv.add_child(folium.CircleMarker(location=[lat, lon], popup=folium.Popup(iframe), fill=True,
-                                     fill_color=color_elevation(el), color="grey", fill_opacity=0.7))
+                                      fill_color=color_elevation(el), color="grey", fill_opacity=0.7))
 
 map_.add_child(fgv)
 
